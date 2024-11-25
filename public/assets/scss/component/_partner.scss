@@ -1,0 +1,46 @@
+/*----------
+
+10. partner style
+
+----------*/
+
+@use "../abstract" as *;
+
+.patner-area {
+	background-color: $section-bg;
+}
+.partner-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 45px 70px;
+	margin-top: 10px;
+	@media #{$xl} {
+		gap: 45px 45px;
+	}
+}
+.partner-box {
+	position: relative;
+	max-width: 430px;
+	z-index: 2;
+}
+.partner-thumb {
+	position: absolute;
+	top: -110px;
+	left: -250px;
+	z-index: -1;
+}
+
+.partner-text {
+	margin-top: 20px;
+	p {
+		font-weight: 600;
+		color: $heading-color;
+		max-width: 245px;
+		span {
+			font-size: 24px;
+			font-weight: 700;
+			color: $theme-color;
+		}
+	}
+}

@@ -1,0 +1,225 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?1f4210aecd65cc243f619cf017653a71") format("truetype"),
+url("./flaticon.woff?1f4210aecd65cc243f619cf017653a71") format("woff"),
+url("./flaticon.woff2?1f4210aecd65cc243f619cf017653a71") format("woff2"),
+url("./flaticon.eot?1f4210aecd65cc243f619cf017653a71#iefix") format("embedded-opentype"),
+url("./flaticon.svg?1f4210aecd65cc243f619cf017653a71#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "menu": "\f101",
+    "search": "\f102",
+    "trolley-cart": "\f103",
+    "cancel": "\f104",
+    "web-programming": "\f105",
+    "career": "\f106",
+    "data-science": "\f107",
+    "bullhorn": "\f108",
+    "facial-treatment": "\f109",
+    "photography": "\f10a",
+    "curve": "\f10b",
+    "herbal": "\f10c",
+    "online-course": "\f10d",
+    "certificate": "\f10e",
+    "laptop": "\f10f",
+    "quotes": "\f110",
+    "align-left": "\f111",
+    "user-1": "\f112",
+    "like": "\f113",
+    "previous": "\f114",
+    "book": "\f115",
+    "menu-1": "\f116",
+    "clock": "\f117",
+    "clock-1": "\f118",
+    "pin": "\f119",
+    "idea": "\f11a",
+    "graduating-student-1": "\f11b",
+    "online-course-2": "\f11c",
+    "teacher-1": "\f11d",
+    "filter": "\f11e",
+    "play": "\f11f",
+    "youtube": "\f120",
+    "lock": "\f121",
+    "people": "\f122",
+    "computer": "\f123",
+    "wall-clock": "\f124",
+    "earth-grid-select-language-button": "\f125",
+    "files": "\f126",
+    "award": "\f127",
+    "list": "\f128",
+    "menu-2": "\f129",
+    "global": "\f12a",
+    "bookmark-white": "\f12b",
+    "calendar": "\f12c",
+    "pin-1": "\f12d",
+    "video-marketing": "\f12e",
+    "share": "\f12f",
+    "avatar": "\f130",
+    "video-camera": "\f131",
+    "place": "\f132",
+);
+
+.flaticon-menu:before {
+    content: map-get($flaticon-map, "menu");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-trolley-cart:before {
+    content: map-get($flaticon-map, "trolley-cart");
+}
+.flaticon-cancel:before {
+    content: map-get($flaticon-map, "cancel");
+}
+.flaticon-web-programming:before {
+    content: map-get($flaticon-map, "web-programming");
+}
+.flaticon-career:before {
+    content: map-get($flaticon-map, "career");
+}
+.flaticon-data-science:before {
+    content: map-get($flaticon-map, "data-science");
+}
+.flaticon-bullhorn:before {
+    content: map-get($flaticon-map, "bullhorn");
+}
+.flaticon-facial-treatment:before {
+    content: map-get($flaticon-map, "facial-treatment");
+}
+.flaticon-photography:before {
+    content: map-get($flaticon-map, "photography");
+}
+.flaticon-curve:before {
+    content: map-get($flaticon-map, "curve");
+}
+.flaticon-herbal:before {
+    content: map-get($flaticon-map, "herbal");
+}
+.flaticon-online-course:before {
+    content: map-get($flaticon-map, "online-course");
+}
+.flaticon-certificate:before {
+    content: map-get($flaticon-map, "certificate");
+}
+.flaticon-laptop:before {
+    content: map-get($flaticon-map, "laptop");
+}
+.flaticon-quotes:before {
+    content: map-get($flaticon-map, "quotes");
+}
+.flaticon-align-left:before {
+    content: map-get($flaticon-map, "align-left");
+}
+.flaticon-user-1:before {
+    content: map-get($flaticon-map, "user-1");
+}
+.flaticon-like:before {
+    content: map-get($flaticon-map, "like");
+}
+.flaticon-previous:before {
+    content: map-get($flaticon-map, "previous");
+}
+.flaticon-book:before {
+    content: map-get($flaticon-map, "book");
+}
+.flaticon-menu-1:before {
+    content: map-get($flaticon-map, "menu-1");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon-map, "clock");
+}
+.flaticon-clock-1:before {
+    content: map-get($flaticon-map, "clock-1");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-idea:before {
+    content: map-get($flaticon-map, "idea");
+}
+.flaticon-graduating-student-1:before {
+    content: map-get($flaticon-map, "graduating-student-1");
+}
+.flaticon-online-course-2:before {
+    content: map-get($flaticon-map, "online-course-2");
+}
+.flaticon-teacher-1:before {
+    content: map-get($flaticon-map, "teacher-1");
+}
+.flaticon-filter:before {
+    content: map-get($flaticon-map, "filter");
+}
+.flaticon-play:before {
+    content: map-get($flaticon-map, "play");
+}
+.flaticon-youtube:before {
+    content: map-get($flaticon-map, "youtube");
+}
+.flaticon-lock:before {
+    content: map-get($flaticon-map, "lock");
+}
+.flaticon-people:before {
+    content: map-get($flaticon-map, "people");
+}
+.flaticon-computer:before {
+    content: map-get($flaticon-map, "computer");
+}
+.flaticon-wall-clock:before {
+    content: map-get($flaticon-map, "wall-clock");
+}
+.flaticon-earth-grid-select-language-button:before {
+    content: map-get($flaticon-map, "earth-grid-select-language-button");
+}
+.flaticon-files:before {
+    content: map-get($flaticon-map, "files");
+}
+.flaticon-award:before {
+    content: map-get($flaticon-map, "award");
+}
+.flaticon-list:before {
+    content: map-get($flaticon-map, "list");
+}
+.flaticon-menu-2:before {
+    content: map-get($flaticon-map, "menu-2");
+}
+.flaticon-global:before {
+    content: map-get($flaticon-map, "global");
+}
+.flaticon-bookmark-white:before {
+    content: map-get($flaticon-map, "bookmark-white");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-pin-1:before {
+    content: map-get($flaticon-map, "pin-1");
+}
+.flaticon-video-marketing:before {
+    content: map-get($flaticon-map, "video-marketing");
+}
+.flaticon-share:before {
+    content: map-get($flaticon-map, "share");
+}
+.flaticon-avatar:before {
+    content: map-get($flaticon-map, "avatar");
+}
+.flaticon-video-camera:before {
+    content: map-get($flaticon-map, "video-camera");
+}
+.flaticon-place:before {
+    content: map-get($flaticon-map, "place");
+}

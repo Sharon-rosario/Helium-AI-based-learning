@@ -1,0 +1,169 @@
+/*----------
+
+23. membership style
+
+----------*/
+
+@use "../abstract" as *;
+// membershop-style
+
+// price-tab
+.membership-tittle {
+	p {
+		color: $heading-color;
+		margin-bottom: 50px;
+	}
+}
+.pricing-tab .nav-tabs {
+	border: none;
+}
+.pricing-tab .nav-tabs .nav-link {
+	margin-bottom: 0;
+	border: 0;
+}
+.pricing-tab .nav .nav-item .nav-link {
+	padding: 7px 60px;
+	background: transparent;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: $heading-color;
+	position: relative;
+	outline: none;
+	font-size: 16px;
+	border: none;
+	z-index: 2;
+}
+.pricing-tab .nav .nav-item:last-child .nav-link {
+	padding-right: 0;
+}
+.pricing-tab .nav .nav-item:first-child .nav-link {
+	padding-left: 0;
+}
+.pricing-tab .nav .nav-item {
+	padding-left: 0px;
+}
+.pricing-tab .nav .nav-item .nav-link.active {
+	color: $theme-color;
+}
+.pricing-tab .nav .nav-item .nav-link.active {
+	&::after {
+		right: 10px;
+	}
+}
+.pricing-tab .nav .nav-item .nav-link {
+	&::after {
+		position: absolute;
+		content: "";
+		right: -32px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		width: 22px;
+		height: 22px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		background: $theme-color;
+		z-index: 1;
+	}
+}
+.pricing-tab .nav .nav-item:last-child .nav-link {
+	&::after {
+		display: none;
+	}
+}
+.pricing-tab .nav .nav-item .nav-link::before {
+	position: absolute;
+	content: "";
+	right: 0px;
+	top: 50%;
+	-webkit-transform: translateY(-50%) translateX(50%);
+	-moz-transform: translateY(-50%) translateX(50%);
+	-ms-transform: translateY(-50%) translateX(50%);
+	transform: translateY(-50%) translateX(50%);
+	background: #f5f6f9;
+	width: 80px;
+	height: 40px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 20px;
+	border: 1px solid $theme-color;
+}
+.pricing-tab .nav .nav-item:last-child .nav-link::before {
+	display: none;
+}
+.membership-box {
+	padding: 40px 40px;
+	box-shadow: 0px 10px 40px rgba(12, 29, 74, 0.08);
+	border-radius: 8px;
+	background: $white;
+	border: 1px solid $border;
+	overflow: hidden;
+	position: relative;
+	height: 480px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@media #{$xl,$xs} {
+		padding: 40px 30px;
+	}
+}
+.membership-info {
+	h4 {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	span {
+		font-size: 28px;
+		font-weight: 900;
+		color: $theme-color;
+	}
+}
+.membership-price {
+	p {
+		font-size: 15px;
+		color: $heading-color;
+	}
+}
+.membership-list {
+	padding: 15px 0;
+	ul {
+		li {
+			margin-bottom: 5px;
+			i {
+				color: $theme-color;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+.Popular-plan {
+	position: absolute;
+	background: $theme-color-2;
+	top: -30px;
+	right: -84px;
+	font-size: 14px;
+	font-weight: 600;
+	color: $heading-color;
+	text-align: center;
+	padding: 62px 72px 6px;
+	transform: rotate(48deg);
+}
+.Popular-plan {
+	span {
+		width: 70px;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 600;
+		font-family: "Raleway", sans-serif;
+	}
+}

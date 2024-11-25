@@ -1,0 +1,131 @@
+/*----------
+
+15. campus style
+
+----------*/
+
+@use "../abstract" as *;
+
+// shape-style
+.shape-light {
+	position: absolute;
+	background: $theme-color-2;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 50%;
+	top: -40px;
+	right: 20px;
+	animation-duration: 2.5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-name: hero-bounce;
+}
+.campus-shape-content {
+	max-width: 290px;
+	background: $white;
+	padding: 25px 25px;
+	border-radius: 5px;
+	box-shadow: 0px 40px 50px rgba(24, 44, 74, 0.16);
+	h5 {
+		font-family: "Nunito Sans", sans-serif;
+	}
+	span {
+		font-size: 18px;
+		color: $heading-color;
+		font-weight: 600;
+	}
+}
+
+.campus-shape-sticker {
+	position: absolute;
+	bottom: 70px;
+	right: 25px;
+	z-index: 1;
+}
+.campus-shape-1 {
+	position: absolute;
+	right: -26%;
+	bottom: calc(0% - 70px);
+}
+.campus-shape-2 {
+	position: absolute;
+	bottom: 16%;
+	left: -14%;
+	@media #{$xs,$sm,$md} {
+		left: 0;
+	}
+}
+.campus-img-wrapper {
+	min-height: 495px;
+	margin-top: 56px;
+	@media #{$md,$sm,$xs} {
+		margin-top: 81px;
+	}
+	@media #{$xs} {
+		margin-top: 51px;
+	}
+}
+.campus-shape-3 {
+	position: absolute;
+	top: 3%;
+	left: 5%;
+	@media #{$xs,$sm,$md} {
+		display: none;
+	}
+}
+.campus-img-1 {
+	position: absolute;
+	top: 140px;
+}
+.campus-img-2 {
+	position: absolute;
+	top: -5%;
+	left: 23%;
+	@media #{$xl} {
+		left: 27%;
+	}
+}
+.campus-img-3 {
+	position: absolute;
+	top: -11%;
+	left: 60%;
+	@media #{$xl} {
+		left: 71%;
+	}
+	@media #{$xs} {
+		display: none;
+	}
+}
+.campus-img-4 {
+	position: absolute;
+	top: 41%;
+	left: 23%;
+	@media #{$xl} {
+		left: 27%;
+	}
+}
+.campus-img-5 {
+	position: absolute;
+	right: -4px;
+	top: 23%;
+	@media #{$xl} {
+		right: -18%;
+	}
+}
+.compus-content {
+	ul li {
+		font-size: 16px;
+		color: $heading-color;
+		font-weight: 600;
+		margin-bottom: 10px;
+		i {
+			margin-right: 10px;
+			color: $theme-color;
+		}
+	}
+	p {
+		margin-bottom: 25px;
+	}
+}

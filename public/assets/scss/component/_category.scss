@@ -1,0 +1,148 @@
+/*----------
+
+05. category style
+
+----------*/
+
+@use "../abstract" as *;
+
+// catagory-style
+
+.catagory-wrapper {
+	display: flex;
+	background: transparent;
+	align-items: center;
+	border: 1px solid $border;
+	border-radius: 5px;
+	padding: 20px 30px;
+	@include transition(0.3s);
+	min-height: calc(100% - 30px);
+	&:hover {
+		background-color: #621562;
+		box-shadow: 0px 40px 40px rgba(24, 44, 74, 0.1);
+		border-color: #410241;
+	}
+	.catagory-thumb {
+		margin-right: 22px;
+	}
+	.catagory-content {
+		h3 {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 4px;
+			line-height: 1;
+		}
+		color: $heading-color;
+		span {
+			color: $body-text;
+			font-size: 16px;
+			font-weight: 600;
+			@media #{$xs,$sm,$md,$lg,$xl} {
+				font-size: 14px;
+			}
+		}
+	}
+	&:hover .catagory-content :is(a, h3, span) {
+		color: $white;
+	}
+}
+.catagory-wrapper {
+	&:hover svg * {
+		fill: $white;
+	}
+}
+// home-page-2 categories-area
+.categories-area {
+	background-color: $theme-bg;
+}
+.categories-wrapper {
+	padding: 37px 20px 15px 20px;
+	background: $white;
+	box-shadow: 0px 20px 30px rgba(24, 44, 74, 0.05);
+	border-radius: 10px;
+}
+.categiories-thumb {
+	transition: 0.3s;
+	svg {
+		margin-bottom: 30px;
+	}
+}
+.categories-wrapper:hover .categiories-thumb {
+	transform: translateY(-10px);
+}
+.categories-content {
+	h4 {
+		margin-bottom: 5px;
+	}
+	p {
+		font-weight: 600;
+		@media #{$xxxl} {
+			font-size: 15px;
+		}
+	}
+}
+
+// category-wrapper
+.category-shap-01 {
+	position: absolute;
+	top: -28%;
+	left: -5%;
+}
+.category-shap-02 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	@media #{$xxxl,$xxl,$xl} {
+		right: 0;
+	}
+	@media #{$lg,$md,$sm,$xs} {
+		display: none;
+	}
+}
+.category-button-prev {
+	width: 45px;
+	height: 45px;
+	border: 1px solid $border;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 50%;
+	background: $white;
+	position: absolute;
+	top: 46%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	left: 0;
+	transition: 0.3s;
+	@media #{$xs} {
+		transform: translate(-25%, -50%);
+	}
+	&:hover {
+		border-color: $theme-color;
+		background: $theme-color;
+		color: $white;
+	}
+}
+.category-button-next {
+	width: 45px;
+	height: 45px;
+	border: 1px solid $border;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 50%;
+	background: $white;
+	position: absolute;
+	top: 46%;
+	transform: translate(50%, -50%);
+	z-index: 2;
+	right: 0;
+	transition: 0.3s;
+	@media #{$xs} {
+		transform: translate(25%, -50%);
+	}
+	&:hover {
+		border-color: $theme-color;
+		background: $theme-color;
+		color: $white;
+	}
+}

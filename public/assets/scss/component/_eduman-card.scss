@@ -1,0 +1,184 @@
+/*----------
+
+14. helium-card style
+
+----------*/
+
+@use "../abstract" as *;
+
+.university-main-wraper {
+	@media #{$md,$sm,} {
+		flex-wrap: wrap;
+		> * {
+			flex: 0 0 50%;
+		}
+	}
+	@media #{$xs} {
+		flex-wrap: wrap;
+	}
+}
+.university-card {
+	margin-top: -140px;
+}
+.university-course-box {
+	padding: 42px 48px 42px 48px;
+	background: $theme-color;
+	@media #{$xl} {
+		padding: 35px 48px 40px 48px;
+	}
+	@media #{$lg} {
+		padding: 28px 20px 40px 20px;
+	}
+	@media #{$sm} {
+		padding: 35px 20px 40px 19px;
+	}
+	@media #{$xs} {
+		padding: 42px 30px 42px 30px;
+		width: 100%;
+	}
+}
+.university-main-wraper {
+	position: relative;
+	z-index: 5;
+}
+.university-card-wrapper {
+	padding: 45px 40px 45px 40px;
+	background-color: #f6f8fb;
+	@media #{$lg} {
+		padding: 47px 20px 35px 20px;
+	}
+	@media #{$xs} {
+		padding: 45px 30px 45px 30px;
+		width: 100%;
+	}
+}
+.university-card-text {
+	p {
+		font-weight: 700;
+		color: $white;
+		margin-bottom: 15px;
+		display: block;
+		line-height: 1;
+	}
+	span {
+		font-weight: 900;
+	}
+	h3 {
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 32px;
+		line-height: 1.3;
+		color: $white;
+	}
+}
+.university-card-icon {
+	width: 65px;
+	height: 65px;
+	background: $white;
+	line-height: 65px;
+	text-align: center;
+	border-radius: 50%;
+	margin-bottom: 30px;
+	@include transition(0.3s);
+}
+.university-card-wrapper:hover .university-card-icon {
+	transform: translateY(-10px);
+}
+.university-card-content {
+	h3 {
+		font-size: 18px;
+		margin-bottom: 15px;
+		line-height: 1;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// messanger
+.message-sticker {
+	img {
+		padding-left: 22px;
+		max-width: 100%;
+		@media #{$md,$sm,$xs} {
+			padding-left: 0;
+		}
+	}
+}
+.message-profile-text {
+	margin-bottom: 40px;
+	span {
+		font-size: 18px;
+		font-weight: 600;
+		color: $heading-color;
+		margin-bottom: 27px;
+		display: block;
+	}
+}
+.message-meta {
+	display: flex;
+	align-items: center;
+	@media #{$md,$sm,$xs} {
+		margin-bottom: 50px;
+	}
+}
+.message-meta-link {
+	margin-left: 20px;
+	h4 {
+		line-height: 1;
+		margin-bottom: 3px;
+		font-size: 18px;
+	}
+	p {
+		margin-bottom: 0px;
+	}
+}
+.feedback-wrapper {
+	padding-left: 60px;
+	@media #{$xs,$sm,$md} {
+		padding-left: 0px;
+		margin-top: 25px;
+	}
+}
+.etablist-price {
+	height: 160px;
+	width: 160px;
+	background: #2467ec;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: absolute;
+	bottom: 2%;
+	right: 0;
+	@media #{$md,$sm} {
+		left: 250px;
+	}
+	@media #{$xs} {
+		left: 0px;
+	}
+}
+.etablist-price {
+	p {
+		color: $white;
+		margin-bottom: 0;
+		span {
+			display: block;
+			text-align: center;
+			font-size: 40px;
+			font-weight: 900;
+			padding: 5px 0;
+			line-height: 1;
+		}
+	}
+}

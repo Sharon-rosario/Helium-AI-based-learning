@@ -1,0 +1,1068 @@
+@use "../abstract" as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: helium – Education & Online Courses React, NextJs Template
+    Author: Bdevs
+    Support: https://www.devsnews.com/support/
+    Description: helium – Education & Online Courses React, NextJs Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+01. common style
+02. header style
+03. hero style
+04. section-title style
+05. category style
+06. counter style
+07. student-choose style
+08. testimonial style
+09. education style
+10. partner style
+11. teacher style
+12. blog style
+13. skill style
+14. helium-card style
+15. campus style
+16. event style
+17. features style
+18. course style
+19. instructor style
+20. about style
+21. banner style
+22. shop style
+23. membership style
+24. zoom-class style
+25. faq style
+26. contact style
+27. footer style
+
+
+
+**********************************************/
+/*
+
+
+*/
+
+/*----------
+
+01. common style
+
+----------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $nunito;
+	font-size: 16px;
+	font-weight: normal;
+	color: $body-text;
+	line-height: 26px;
+}
+
+a {
+	text-decoration: none;
+}
+label {
+	cursor: pointer;
+}
+.w-img {
+	& img {
+		width: 100%;
+	}
+}
+.gallery-area {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.gallery-inner {
+	display: flex;
+	flex-wrap: wrap;
+	> div {
+		width: 20%;
+		@media #{$sm} {
+			width: 33.33%;
+		}
+		@media #{$xs} {
+			width: 50%;
+		}
+	}
+}
+.gallery-single {
+	position: relative;
+	&:hover {
+		.gallery-link {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.gallery-link {
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+		content: "";
+		opacity: 0.6;
+	}
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+}
+.gallery-insta {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 26px;
+	&:hover {
+		color: #fff;
+	}
+}
+
+.m-img {
+	& img {
+		max-width: 100%;
+	}
+}
+.features-mt {
+	margin-top: -85px;
+}
+
+a,
+.btn,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+li,
+img,
+svg path,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include transition(0.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+button:hover {
+	cursor: pointer;
+}
+button:focus {
+	outline: 0;
+	border: 0;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $raleway;
+	color: $heading-color;
+	margin-top: 0px;
+	font-weight: 700;
+	line-height: 1.3;
+	@include transition(0.3s);
+}
+
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+}
+p {
+	font-family: $nunito;
+	font-size: 16px;
+	font-weight: normal;
+	color: $body-text;
+	margin-bottom: 15px;
+	line-height: 26px;
+}
+
+*::-moz-selection {
+	background: $theme-color;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $theme-color;
+	color: $white;
+	text-shadow: none;
+}
+::selection {
+	background: $theme-color;
+	color: $white;
+	text-shadow: none;
+}
+
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $body-text;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $body-text;
+	font-size: 14px;
+	opacity: 1;
+}
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+	overflow: hidden;
+}
+.clear {
+	clear: both;
+}
+
+.f-left {
+	float: left;
+}
+.f-right {
+	float: right;
+}
+
+.z-index-1 {
+	z-index: 1;
+}
+
+.z-index-11 {
+	z-index: 11;
+}
+
+.overflow-y-visible {
+	overflow-x: hidden;
+    overflow-y : visible;
+}
+
+.p-relative {
+	position: relative;
+}
+.p-absolute {
+	position: absolute;
+}
+/*--
+    - Background color
+-----------------------------------------*/
+.grey-bg {
+	background: $theme-color-2;
+}
+.section-bg {
+	background: $section-bg;
+}
+
+.pink-bg {
+	background: $theme-color;
+}
+
+.white-bg {
+	background: $white;
+}
+.black-bg {
+	background: $black;
+}
+
+.footer-bg {
+	background: $footer-bg;
+}
+
+// .primary-bg {
+// 	background: #222;
+// }
+
+/*--
+    - color
+-----------------------------------------*/
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: $white !important;
+}
+
+.white-color {
+	color: $white;
+}
+
+.theme-color {
+	color: $theme-color !important;
+}
+.black-color {
+	color: $black;
+}
+
+// spacing
+
+// overlay
+
+.body-overlay {
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1004;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(0.3s);
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+.body-overlay.opened {
+	opacity: 1;
+	visibility: visible;
+}
+
+// extra css
+.progress-wrap {
+	@media #{$xs} {
+		right: 15px;
+		bottom: 15px;
+	}
+}
+.long-padding {
+	padding-bottom: 285px;
+}
+/* link btn */
+
+.link-btn {
+	position: relative;
+	font-size: 15px;
+	font-weight: 600;
+	color: $theme-color;
+	text-transform: uppercase;
+	padding-right: 15px;
+	& i {
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		transition: all ease 0.2s;
+		-webkit-transition: all ease 0.2s;
+		-moz-transition: all ease 0.2s;
+		-ms-transition: all ease 0.2s;
+		-o-transition: all ease 0.2s;
+		&:first-child {
+			left: -100%;
+			visibility: hidden;
+			opacity: 0;
+		}
+		&:last-child {
+			right: 0;
+		}
+	}
+	&:hover {
+		color: $black;
+		& i:first-child {
+			left: 0;
+			visibility: visible;
+			opacity: 1;
+		}
+		& i:last-child {
+			right: -100%;
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+}
+
+.link-btn-2 {
+	position: relative;
+	font-size: 14px;
+	color: $theme-color;
+	font-weight: 600;
+	padding-right: 22px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: $nunito;
+	& i {
+		position: absolute;
+		top: 45%;
+		@include transform(translateY(-50%));
+		transition: all ease 0.2s;
+		-webkit-transition: all ease 0.2s;
+		-moz-transition: all ease 0.2s;
+		-ms-transition: all ease 0.2s;
+		-o-transition: all ease 0.2s;
+		font-size: 12px;
+		&:first-child {
+			right: 10%;
+			visibility: hidden;
+			opacity: 0;
+		}
+		&:last-child {
+			right: 0;
+		}
+	}
+	&:hover {
+		color: $theme-color;
+		& i {
+			&:first-child {
+				right: 0;
+				visibility: visible;
+				opacity: 1;
+			}
+			&:last-child {
+				right: -10%;
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+	}
+	&.pink {
+		color: $theme-color;
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+/* pulse btn */
+
+.pulse-btn {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	line-height: 84px;
+	text-align: center;
+	background-color: $white;
+	@include border-radius(50%);
+	color: $theme-color;
+	animation: pulse 2s infinite;
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+	& i {
+		padding-left: 2px;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+@keyframes pulse {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+		box-shadow: 0 0 0 45px rgba(255, 255, 255, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
+.edu-btn {
+	display: inline-block;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $white;
+	background-color: #621562;
+	padding: 0 20px;
+	@include border-radius(4px);
+	@include transition(0.3s);
+	border: 1px solid transparent;
+	&:hover {
+		background-color: #992599;
+		color: $white;
+	}
+	&:focus {
+		color: $white;
+		border: 1px solid transparent;
+	}
+}
+.edu-sec-btn {
+	display: inline-block;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $white;
+	background-color: #410241;
+	padding: 0 30px;
+	border: 1px solid #dce8fe;
+	@include border-radius(4px);
+	@include transition(0.3s);
+	cursor: pointer;
+	&:hover {
+		background-color: #621562;
+		color: $white;
+		border-color: $theme-color;
+	}
+}
+.edu-border-btn {
+	display: inline-block;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $theme-color;
+	background-color: transparent;
+	padding: 0 30px;
+	border: 1px solid #dce8fe;
+	@include border-radius(4px);
+	@include transition(0.3s);
+	cursor: pointer;
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+	&:focus {
+		border: 1px solid #dce8fe;
+	}
+}
+.edu-thard-btn {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $heading-color;
+	background-color: $theme-color-2;
+	padding: 0 40px;
+	display: inline-block;
+	@include transition(0.3s);
+	cursor: pointer;
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+}
+.edu-four-btn {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $heading-color;
+	background-color: $theme-color-2;
+	padding: 0 40px;
+	@include border-radius(4px);
+	@include transition(0.3s);
+	border: 1px solid transparent;
+	cursor: pointer;
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+}
+.edu-five-btn {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $white;
+	background-color: $theme-color;
+	padding: 0 40px;
+	@include transition(0.3s);
+	border: 1px solid transparent;
+	&:hover {
+		background-color: $theme-color-2;
+		color: $heading-color;
+		border: 1px solid $theme-color-2;
+	}
+}
+.edu-six-btn {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $heading-color;
+	background-color: $theme-color-2;
+	border: 1px solid transparent;
+	padding: 0 40px;
+	display: inline-block;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+		border: 1px solid $white;
+	}
+}
+.edo-theme-btn {
+	display: inline-block;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $theme-color;
+	background-color: transparent;
+	padding: 0 40px;
+	border: 1px solid $theme-color;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+		border-color: transparent;
+	}
+}
+.blog-btn {
+	background: transparent;
+	display: inline-block;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 30px;
+	color: $theme-color;
+	font-size: 16px;
+	font-weight: 600;
+	border: 1px solid #DCE8FE;
+	text-align: center;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+}
+.edo-course-btn {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $heading-color;
+	background-color: $theme-color-2;
+	padding: 0px 25px;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+	@media #{$xl} {
+		padding: 0px 7px;
+	}
+}
+.edo-course-sec-btn {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: $white;
+	background-color: $theme-color;
+	padding: 0px 25px;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color-2;
+		color: $heading-color;
+	}
+}
+.course-btn {
+	height: 40px;
+	background: #621562;
+	padding: 0 25px;
+	display: inline-block;
+	line-height: 40px;
+	border-radius: 3px;
+	font-weight: 600;
+	color: $white;
+	&:hover {
+		color: $white;
+		background-color: #812381;
+	}
+}
+
+.add-cart-btn {
+	height: 45px;
+	padding: 0 45px;
+	display: inline-block;
+	background-color: $theme-color;
+	line-height: 45px;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 600;
+	color: $white;
+	@include transition(0.3s);
+	@media #{$xl,$lg,$md} {
+		padding: 0 35px;
+	}
+	&:hover {
+		background: $theme-color-2;
+		color: $heading-color;
+	}
+	i {
+		margin-right: 10px;
+		@include transition(0.3s);
+	}
+}
+.view-details-btn {
+	height: 45px;
+	padding: 0 45px;
+	display: inline-block;
+	background-color: $theme-color;
+	line-height: 45px;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 600;
+	color: $white;
+	@include transition(0.3s);
+	@media #{$xl,$lg,$md} {
+		padding: 0 35px;
+	}
+	&:hover {
+		background: $theme-color-2;
+		color: $heading-color;
+	}
+}
+.c-share-btn {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #dce8fe;
+	border-radius: 4px;
+	font-size: 19px;
+	color: #a6bce8;
+	line-height: 50px;
+	text-align: center;
+	@include transition(0.3s);
+	&:hover {
+		background: $theme-color;
+		border-color: $theme-color;
+		color: $white;
+	}
+}
+.wishlist-btn {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #dce8fe;
+	border-radius: 4px;
+	font-size: 19px;
+	color: #a6bce8;
+	line-height: 50px;
+	text-align: center;
+	@include transition(0.3s);
+	&:focus {
+		border: 1px solid #dce8fe;
+	}
+	&:hover {
+		border-color: $theme-color;
+		color: $theme-color;
+	}
+	&.w-added {
+		background: $theme-color;
+		border-color: $theme-color;
+		color: $white;
+	}
+}
+.edu-follow-btn {
+	height: 50px;
+	padding: 0 40px 0 60px;
+	background: $theme-color;
+	display: block;
+	line-height: 50px;
+	border-radius: 3px;
+	color: $white;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 600;
+	@include transition(0.3s);
+	position: relative;
+	i {
+		margin-right: 10px;
+	}
+	&:focus {
+		color: $white;
+	}
+	&:hover {
+		color: $heading-color;
+		background: $theme-color-2;
+		&:before {
+			color: $heading-color;
+		}
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		left: 35px;
+		top: 0;
+		font-family: "Font Awesome 5 Pro";
+		font-size: 14px;
+		font-weight: 400;
+		color: #ffffff;
+	}
+	&.followed::before {
+		content: "";
+	}
+}
+.course-details-action {
+	display: flex;
+	gap: 20px;
+	width: 240px;
+	justify-content: flex-end;
+	@media #{$sm,$xs} {
+		justify-content: flex-start;
+	}
+}
+.share-btn {
+	border: 1px solid $border;
+	padding: 10px 15px;
+	border-radius: 4px;
+	line-height: 50px;
+	text-align: center;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		border-color: transparent;
+		i {
+			color: $white;
+		}
+	}
+}
+.membership-btn-active {
+	height: 55px;
+	background: $theme-color-2;
+	display: block;
+	line-height: 55px;
+	text-align: center;
+	border-radius: 4px;
+	color: #161b1c;
+	padding: 0 30px;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+}
+.membership-btn {
+	height: 55px;
+	background: $theme-color;
+	display: block;
+	line-height: 55px;
+	text-align: center;
+	border-radius: 4px;
+	color: $white;
+	padding: 0 30px;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color-2;
+		color: #161b1c;
+	}
+}
+.get-btn {
+	height: 45px;
+	display: inline-block;
+	background: $white;
+	line-height: 45px;
+	color: $heading-color;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 0 20px;
+	border-radius: 3px;
+	border: 1px solid $border;
+	@include transition(0.3s);
+	&:hover {
+		background: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+}
+.video-cart-btn {
+	height: 55px;
+	padding: 0px 20px;
+	display: inline-block;
+	background-color: $theme-color;
+	line-height: 55px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 600;
+	color: $white;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color-2;
+		color: $heading-color;
+	}
+	i {
+		margin-right: 10px;
+	}
+}
+.video-wishlist-btn {
+	height: 55px;
+	padding: 0px 20px;
+	display: inline-block;
+	background-color: #eff1f6;
+	line-height: 55px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 600;
+	color: $heading-color;
+	@include transition(0.3s);
+	&:hover {
+		background-color: $theme-color;
+		color: $white;
+	}
+	i {
+		margin-right: 10px;
+	}
+}
+.cont-btn {
+	height: 50px;
+	background: #410241;
+	color: $white;
+	text-align: center;
+	width: 120px;
+	border-radius: 10px;
+	font-weight: 600;
+	@include transition(0.3s);
+	display: inline-block;
+	line-height: 55px;
+	&:hover {
+		color: $white;
+		background: #621562;
+	}
+}
+.event-btn {
+	height: 55px;
+	line-height: 53px;
+	color: $white;
+	background: $theme-color;
+	border-radius: 4px;
+	font-weight: 600;
+	padding: 0 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	@include transition(0.3s);
+	justify-content: center;
+	width: 100%;
+	&:hover {
+		color: $heading-color;
+		background: $theme-color-2;
+	}
+}
+
+.course-sidebar-info.content-hidden {
+	ul {
+		display: none;
+	}
+	&::after {
+		transform: rotate(0deg);
+	}
+}
+.course-title-breadcrumb {
+	.breadcrumb-item {
+		margin-right: 10px;
+	}
+	.breadcrumb-item + .breadcrumb-item {
+		padding-left: 0;
+	}
+}
+/* Remove the calendar icon from date input in Chrome and Safari */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Remove the calendar icon from date input in Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+    display: none;
+}
+
+/* Hide the input's text field arrows in Firefox and other browsers */
+input[type="date"] {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+

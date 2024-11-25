@@ -1,0 +1,100 @@
+/*----------
+
+21. banner style
+
+----------*/
+
+@use "../abstract" as *;
+
+// banner
+.banner-area {
+	background: #edeff5;
+	min-height: 450px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.banner-img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.faq .banner-img {
+	@media #{$xs} {
+		display: none;
+	}
+}
+.banner-search-box {
+	position: relative;
+}
+.banner-tittle {
+	h2 {
+		margin-bottom: 45px;
+		@media #{$xs} {
+			font-size: 28px;
+		}
+	}
+}
+.slider-faq-search input {
+	height: 70px;
+	width: 100%;
+	background: $white;
+	border: 1px solid $border;
+	border-radius: 5px;
+	box-shadow: 0px 5px 10px rgba(15, 32, 91, 0.07);
+	padding: 0 20px;
+	position: relative;
+	color: #707070;
+	font-size: 14px;
+	outline: none;
+	text-transform: capitalize;
+	&::placeholder {
+		color: #a5a5a5;
+	}
+}
+.slider-faq-search button {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translatey(-50%);
+	font-size: 16px;
+	color: #c1c5ce;
+}
+// breadcrumb-style
+.breadcrumb-item.active {
+	color: $white;
+}
+.breadcrumb-item {
+	a {
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	float: left;
+	padding-right: 0.5rem;
+	content: "\f105";
+	font-family: "Font Awesome 5 Pro";
+	color: $white;
+}
+.breadcrumb-item span {
+	color: #fff;
+}
+.course-title-breadcrumb.breadcrumb-top {
+	margin-top: -90px;
+}
+.breadcrumb-item.white-color a {
+	color: $heading-color;
+}
+.breadcrumb-item.white-color::before {
+	color: $heading-color;
+}
+.banner-tiitle-wrapper {
+	max-width: 670px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	z-index: 1;
+}

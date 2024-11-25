@@ -1,0 +1,57 @@
+/*----------
+
+09. education style
+
+----------*/
+
+@use "../abstract" as *;
+
+// education-style
+.education-img {
+	img {
+		max-width: 100%;
+	}
+}
+.sitdent-choose-content {
+	p {
+		margin-bottom: 25px;
+	}
+}
+.education-content {
+	p {
+		margin-bottom: 40px;
+	}
+}
+// education-home-2 shape
+.education-shape {
+	position: absolute;
+	right: 5%;
+	top: 23%;
+	@media #{$xs} {
+		display: none;
+	}
+}
+.education-shape-2 {
+	position: absolute;
+	top: 26%;
+	left: 24%;
+	z-index: -1;
+	@media #{$xl,$lg} {
+		left: 17%;
+	}
+	@media #{$xs} {
+		display: none;
+	}
+}
+.education-shape-3 {
+	position: absolute;
+	right: 16%;
+	top: 60%;
+	z-index: -1;
+}
+.education-shape-4 {
+	position: absolute;
+	right: 4%;
+	top: 45%;
+	z-index: -1;
+}

@@ -1,0 +1,139 @@
+/*----------
+
+07. student-choose style
+
+----------*/
+
+@use "../abstract" as *;
+
+// student-choose
+.student-choose-thumb {
+	margin-top: 37px;
+	img {
+		max-width: 100%;
+	}
+}
+.sitdent-choose-content {
+	margin-bottom: 20px;
+	p {
+		color: $body-text;
+	}
+}
+.student-choose-list {
+	margin-bottom: 40px;
+	li {
+		margin-bottom: 15px;
+		color: $heading-color;
+	}
+	i {
+		margin-right: 10px;
+		color: #d0d9e9;
+		font-size: 20px;
+		transform: translateY(2px);
+	}
+}
+.student-choose-list i.far {
+	color: $theme-color;
+}
+.student-btn {
+	@media #{$md,$sm,$xs} {
+		margin-bottom: 30px;
+	}
+}
+// shap-style
+
+.shap-01 {
+	position: absolute;
+	top: 170px;
+	left: 40%;
+	@media #{$xl} {
+		top: 120px;
+		left: 31%;
+	}
+	@media #{$lg} {
+		top: 120px;
+		left: 18%;
+	}
+	height: 130px;
+	width: 122px;
+	background: $theme-color-2;
+	border-radius: 8px;
+}
+.shap-02 {
+	position: absolute;
+	top: -8%;
+	left: 45%;
+	height: 151px;
+	width: 150px;
+	background: $theme-color;
+	border-radius: 8px;
+	z-index: -1;
+	@media #{$xl} {
+		top: -11%;
+		left: 48%;
+	}
+	@media #{$lg} {
+		top: -20%;
+		left: 48%;
+	}
+	@media #{$md} {
+		left: 34%;
+	}
+	@media #{$xs} {
+		top: 1%;
+	}
+}
+.shap-03 {
+	position: absolute;
+	top: -7%;
+	left: -7%;
+	z-index: -1;
+	@media #{$xs,$sm,$md} {
+		display: none;
+	}
+}
+.shap-04 {
+	position: absolute;
+	bottom: -9%;
+	left: 33%;
+	z-index: -1;
+}
+.shap-05 {
+	position: absolute;
+	bottom: 41%;
+	right: -35%;
+	z-index: -1;
+	@media #{$xxxl,$xl} {
+		right: 0;
+	}
+	@media #{$xxl,$lg} {
+		right: 0;
+	}
+	@media #{$md,$sm,$xs} {
+		display: none;
+	}
+}
+.shap-06 {
+	position: absolute;
+	top: -160px;
+	right: -43%;
+	z-index: -2;
+	@media #{$md,$sm,$xs} {
+		display: none;
+	}
+}
+.shap-07 {
+	position: absolute;
+	bottom: 15%;
+	right: -20%;
+	z-index: -1;
+	@media #{$xxl} {
+		right: -6%;
+	}
+	@media #{$xl,$lg} {
+		right: 0;
+	}
+	@media #{$md,$sm,$xs} {
+		display: none;
+	}
+}

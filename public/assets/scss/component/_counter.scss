@@ -1,0 +1,61 @@
+/*----------
+
+06. counter style
+
+----------*/
+
+@use "../abstract" as *;
+
+// counter
+.counter-wrapper {
+	padding: 50px 30px 50px 30px;
+	background-color: $theme-bg;
+}
+// homepage-2
+.count-number {
+	span {
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 10px;
+		display: inline-block;
+		color: $heading-color;
+		&.counter-text,
+		&.counters {
+			margin-bottom: 0px;
+		}
+	}
+	p {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 0px;
+	}
+}
+.counter-icon svg {
+	margin-bottom: 30px;
+}
+// university-couner
+.counter-img {
+	svg {
+		margin-bottom: 25px;
+	}
+}
+.university-couner-text {
+	span {
+		font-size: 36px;
+		font-weight: 700;
+		color: $white;
+		margin-bottom: 15px;
+		display: inline-block;
+		&.counter-text,
+		&.counters {
+			margin-bottom: 0px;
+		}
+	}
+}
+.university-couner-text {
+	p {
+		font-size: 18px;
+		font-weight: 600;
+		color: $white;
+	}
+}
